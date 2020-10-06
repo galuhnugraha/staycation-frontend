@@ -3,9 +3,7 @@ import Header from 'parts/Header'
 import landingPage from "json/landingPage.json";
 import Hero from 'parts/Hero';
 import MostPicked from 'parts/mostPicked';
-import House from 'parts/House';
-import Hotels from 'parts/Hotel';
-import Apartements from 'parts/Apartements'
+import Categories from 'parts/Categories';
 
 export default class LandingPage extends Component {
     constructor(props) {
@@ -18,9 +16,7 @@ export default class LandingPage extends Component {
                 <Header {...this.props}></Header>
                 <Hero refMostPicked={this.refMostPicked} data={landingPage.hero}/>
                 <MostPicked refMostPicked={this.refMostPicked} data={landingPage.mostPicked}/>
-                <House data={landingPage.categories}/>
-                <Hotels data={landingPage.categories}/>
-                <Apartements data={landingPage.categories}/>
+                <Categories data={landingPage.categories}/>
             </>
         )
     }

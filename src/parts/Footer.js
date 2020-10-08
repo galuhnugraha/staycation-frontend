@@ -70,7 +70,7 @@ export default function Footer() {
                 </div>
                 <div className="row">
                     <div className="col text-center copyrights">
-                    Copyright 2019 • All rights reserved • Staycation
+                    Copyright 2020 • All rights reserved • Staycation
                     </div>
                 </div>
             </div>

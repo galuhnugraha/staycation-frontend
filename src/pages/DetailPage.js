@@ -9,8 +9,10 @@ import Categories from "parts/Categories";
 import Testimoni from 'parts/Testimoni';
 import Fade from 'react-reveal/Fade';
 import Footer from 'parts/Footer';
+import { connect } from "react-redux";  
+import { checkoutBooking } from "store/actions/checkout";
 
-export default class DetailsPage extends Component {
+class DetailsPage extends Component {
 
     componentDidMount() {
         window.title = "Details Page";
@@ -36,7 +38,7 @@ export default class DetailsPage extends Component {
                         </div>
                         <div className="col-5">
                             <Fade bottom>
-                                <BookingForm itemDetails={ItemDetails}></BookingForm>
+                                <BookingForm itemDetails={ItemDetails} startBooking={this.props.checkoutBooking} />
                             </Fade>
                         </div>
                     </div>
@@ -48,3 +50,5 @@ export default class DetailsPage extends Component {
         )
     }
 }
+
+export default connect(null, { checkoutBooking}) (DetailsPage);

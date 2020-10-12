@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 import checkout from "./checkout";
-import pages from "./pages";
+import page from "./page";
 
 export default combineReducers({
     checkout,
-    pages,
+    page,
   });
